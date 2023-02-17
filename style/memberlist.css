@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+
+}
+
+
+body{
+    background: #222222;
+    width: 100%;
+    background-image: url(images/background.png);
+    background-size: cover;
+}
+
+.navbar{
+    height: 12vh;
+    width: 100%;
+    padding: 0px;
+    background: rgb(0, 0, 0, 0.4);
+    color: #f25858;
+    display: flex;
+    flex-direction: row;
+    padding: 0px 20px 0px 20px;
+    
+
+
+}
+
+.navbar img{
+    width: 75px;
+    background-color: rgb(38,32,45);
+    border-radius: 50%;
+    transition: 0.3s;
+    z-index: 1;
+}
+.navbar img:hover{
+    width: 80px;
+    
+}
+.buttonside{
+    display: flex;
+    justify-content: center;
+}
+#submit{
+    transition: 0.3s;
+    background-color: #DC0000;
+    font-weight: bolder;
+    color: #dbdbdb;
+    padding: 4px 8px 4px 8px;
+    border-radius: 20px;
+    text-shadow: 2px 2px #222222;
+
+}
+#submit:hover{
+    cursor: pointer;
+    background-color: #f25858;
+    
+}
+
+.container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    background-color: rgb(0, 0, 0, 0.6);
+    border-radius: 5px;
+}
+.container #toplam{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: context-menu;
+    padding: 10px;
+}
+
+
+#indir, #download{
+    padding: 5px;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #0F7740;
+    color: #dbdbdb;
+    transition: 0.3s;
+}
+#indir:hover, #download:hover{
+    background-color: #21A366 ;
+}
+#allcheckboxes{
+    margin: 5px;
+}
+#delete-product-btn{
+    position: absolute;
+    top: 25px;
+    font-size: 20px;
+    transition: 0.3s;
+    border-radius: 20px;
+    background-color: #DC0000;
+    text-shadow: 1px 1px black;
+    color: #dbdbdb;
+    padding: 0px 20px 0px 20px;
+}
+
+#delete-product-btn:hover{
+    background-color: #f25858;
+}
+
+
+footer{
+    bottom: 0;
+    background-color: rgb(38, 32, 45);
+    padding: 20px 0;
+    width: 100%;
+    height: 200px;
+    
+}
+footer a{
+    text-decoration: none;
+    list-style: none;
+    color: #aaa;
+}
+footer .social{
+    text-align: center;
+    padding-bottom: 10px;
+    color: #dbdbdb;
+}
+footer .social a{
+    font-size: 20px;
+    color: inherit;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin: 0px 12px;
+    opacity: 0.75;
+}
+footer .social a:hover{
+    opacity: 0.9;
+}
+footer ul{
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+footer ul a{
+    color: #dbdbdb;
+    text-decoration: none;
+    opacity:0.8 ;
+
+}
+footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+}
+footer ul li a:hover{
+    opacity: 1;
+}
+footer .copyright{
+    margin-top: 25px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+}
+footer .imza{
+    padding: 10px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+}
+
+
+::-webkit-scrollbar{
+    width: 0;
+}
+/*scroll bar path*/
+#scrollPath{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 100%;
+    background: #3c3c3c;
+    z-index: 10;
+}
+/*scroll bar*/
+#progressbar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 8px;
+    background: linear-gradient(to top, #e6683c, #fff12e);
+    animation: animate 5s linear infinite ;
+    -webkit-animation: animate 5s linear infinite ;
+    z-index: 100;
+    opacity: 0.3;
+
+}
+
+#progressbar:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #e6683c, #fff12e);
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+}
+#progressbar:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #e6683c, #fff12e);
+    filter: blur(30px);
+    -webkit-filter: blur(30px);
+}
+
+@media screen and (max-width:1300px) {
+    .navbar a{
+        font-size: 18px;
+    }
+    #logo{
+        display: none;
+    }
+    .form{
+        max-width: 700px;
+        padding: 34px;
+        margin: 0;
+    }
+    
+}
+
+@media screen and (max-width:450px) {
+    .navbar a{
+        font-size: 18px;
+    }
+    #logo{
+        display: none;
+    }
+    .form{
+        max-width: 700px;
+        padding: 24px;
+        margin: 0;
+    }
+    .navbar img{
+        width: 100px;
+        transform: translateY(20px);
+    }
+    .navbar img:hover{
+        width: 112px;
+    }
+    #submit{
+        font-size: 12px;
+        transform: translateX(10px);
+    }
+    
+}
